@@ -1,0 +1,138 @@
+# Query: pefa
+# ContextLines: 1
+
+33 results - 13 files
+
+index.html:
+  215  
+  216: <!-- PEFA -->
+  217  
+
+  219  
+  220: <img src="assets/pefa.png"
+  221: alt="PEFA">
+  222  
+
+  224  
+  225: <h3>PEFA Thika Road Cathedral</h3>
+  226  
+
+  233  
+  234: <a href="https://pefathikaroadcathedral-production-c4e2f9.up.railway.app/"
+  235  target="_blank">
+
+DJANGO\kingdom_hub\core\models.py:
+  38      start_time = models.TimeField()
+  39:     location = models.CharField(max_length=255, default="PEFA Thika Road Sanctuary")
+  40      banner_image = models.ImageField(upload_to='events/banners/', blank=True, null=True)
+
+DJANGO\kingdom_hub\core\views.py:
+   49      """
+   50:     Handles secure kingdom contributions for PEFA Thika Road by pushing
+   51      instant Lipa Na M-Pesa STK prompts to the congregant's mobile phone.
+
+   58  
+   59:         print(f"💸 PEFA Thika Road Ledger: {name} is seeding Ksh {giving_amount} towards {giving_type}...")
+   60  
+
+   62              # Future M-Pesa Daraja API hooks will be wired right here!
+   63:             account_reference = f"PEFA_{giving_type[:6].upper()}"
+   64              print(f"⚡ Daraja API Payload Prepped: Ref {account_reference} pushed securely to {phone_number}")
+
+  121              )
+  122:             print(f"🙏 PEFA Thika Road Prayer Box: Fresh request logged from '{name_entry}'!")
+  123              messages.success(request,
+
+  270  
+  271:     print(f"✅ PEFA Thika Road Pastoral Desk: Prayer Request #{prayer_id} marked as reviewed!")
+  272      messages.success(request, f"🙏 Prayer petition from '{prayer.sender_name}' has been successfully reviewed and moved to archives.")
+
+DJANGO\kingdom_hub\core\migrations\0001_initial.py:
+  20                  ('start_time', models.TimeField()),
+  21:                 ('location', models.CharField(default='PEFA Thika Road Sanctuary', max_length=255)),
+  22                  ('banner_image', models.ImageField(blank=True, null=True, upload_to='events/banners/')),
+
+DJANGO\kingdom_hub\kingdom_project\settings.py:
+  21  CSRF_TRUSTED_ORIGINS = [
+  22:     'https://pefathikaroadcathedral-production-c4e2f9.up.railway.app',
+  23  ]
+
+DJANGO\kingdom_hub\templates\church_base.html:
+    6      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    7:     <title>{% block title %}PEFA Thika Road Cathedral | Sanctuary of Praise &amp; Glory{% endblock %}</title>
+    8  
+
+  283              <a href="/" class="church-brand">
+  284:                 ⛪ PEFA <span>Thika Road</span>
+  285              </a>
+
+  345      <div class="container">
+  346:         <p style="margin: 0 0 0.5rem 0; font-weight: 900; font-size: 1.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: #ffffff;">PEFA Church Thika Road Cathedral</p>
+  347          <p style="margin: 0 0 2rem 0; font-size: 0.85rem; color: #94a3b8; font-weight: 500;">A Christ-Centered Ministry &bull; Transforming Generations</p>
+
+  351          <p style="margin: 0; font-size: 0.78rem; color: #64748b; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.5;">
+  352:             &copy; {% now "Y" %} PEFA Thika Road &bull; Offered to Glory by <strong>Taylor</strong> — Nairobi.
+  353          </p>
+
+DJANGO\kingdom_hub\templates\church_events.html:
+  2  
+  3: {% block title %}Upcoming Events &amp; Conferences | PEFA Thika Road Sanctuary{% endblock %}
+  4  
+
+DJANGO\kingdom_hub\templates\church_giving.html:
+  2  
+  3: {% block title %}Online Giving | PEFA Thika Road Sanctuary{% endblock %}
+  4  
+
+DJANGO\kingdom_hub\templates\church_home.html:
+   15                  <span style="font-size: 0.78rem; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Welcome to the House of Praise &amp; Transformation</span>
+   16:                 <h1 style="font-size: 2.35rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1.2; margin: 0 0 1rem 0; color: #ffffff;">PEFA CHURCH THIKA CATHEDRAL</h1>
+   17                  <p style="font-size: 1rem; color: #cbd5e1; font-weight: 500; line-height: 1.6; margin-bottom: 2.25rem;">
+
+   41                          <div style="width: 25%; height: 100%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; text-align: center; padding: 1.5rem; flex-shrink: 0;">
+   42:                             <div style="color: #cbd5e1; font-size: 0.85rem; font-weight: 500;">🌟 PEFA Sanctuary Life Moving Gallery</div>
+   43                          </div>
+
+  110                          <p style="font-size: 0.82rem; color: #94a3b8; font-weight: 500; margin-top: 0.25rem; line-height: 1.4;">
+  111:                             Join us physically at PEFA Thika Road Sanctuary or check back during our live service streaming hours!
+  112                          </p>
+
+  149                          <strong style="font-size: 0.92rem; font-weight: 800; display: block; letter-spacing: 0.02em; text-transform: uppercase; color: #dfb15b;">Sanctuary Sanctuary Doors Open</strong>
+  150:                         <p style="font-size: 0.8rem; color: #cbd5e1; font-weight: 500; margin-top: 0.25rem;">PEFA Thika Road Altar Gallery. Upload snapshots via your pastor admin desk.</p>
+  151                      </div>
+
+DJANGO\kingdom_hub\templates\church_sermons.html:
+  2  
+  3: {% block title %}Sermons Media Center | PEFA Thika Road Sanctuary{% endblock %}
+  4  
+
+DJANGO\kingdom_hub\templates\pastor_admin_desk.html:
+  10                  <span style="font-size: 0.75rem; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.25rem;">Pastoral Leadership Space</span>
+  11:                 <h1 style="font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin: 0;">PEFA Administration Portal Desk</h1>
+  12                  <p style="font-size: 0.9rem; color: #cbd5e1; margin-top: 0.5rem; margin-bottom: 0;">Secure management terminal for uploading media files, logs, event bulletins, and clearing intercessory queues.</p>
+
+portfolio\index.html:
+  473  
+  474:                     <img src="assets/pefa.png" alt="PEFA">
+  475  
+
+  477  
+  478:                         <h3>PEFA Church Platform</h3>
+  479  
+
+  490  
+  491:                         <a href="https://pefathikaroadcathedral-production.up.railway.app/"
+  492                              target="_blank"
+
+sms\portfolio\index.html:
+  502  
+  503:                     <img src="assets/pefa.png" alt="PEFA">
+  504  
+
+  506  
+  507:                         <h3>PEFA Thika Road Cathedral</h3>
+  508  
+
+  524  
+  525:                         <a href="https://pefathikaroadcathedral-production-c4e2f9.up.railway.app"
+  526                              target="_blank"
